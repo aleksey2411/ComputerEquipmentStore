@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect:
+          org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: off
+logging:
+  level:
+    org.springframework: INFO
+    by.netcracker: ERROR
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+server:
+  port: 8080
+
